@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: docker
+    container_name: '${APP_NAME}'
+    ports:
+      - 8083:80
+    volumes:
+    - .:/var/www/html
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
