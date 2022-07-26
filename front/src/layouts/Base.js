@@ -2,7 +2,13 @@ import React from 'react';
 
 const Base = (props) => {
 
-    return 'hi';
+    const {children} = props;
+
+    return (
+        <div className="container mt-4">
+            {children}
+        </div>
+    );
 }
 
 export default Base;

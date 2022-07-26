@@ -14,6 +14,10 @@ use Src\AEMET\Infrastructure\Controllers\AEMETGetController;
 |
 */
 
+Route::get('/health_check', function () {
+    return new \Symfony\Component\HttpFoundation\JsonResponse(['code' => 200]);
+});
+
 Route::get('/municipality/{id}', [AEMETGetController::class, 'getMunicipality']);
 
 Route::get('/municipalities', [AEMETGetController::class, 'getAllMunicipalities']);

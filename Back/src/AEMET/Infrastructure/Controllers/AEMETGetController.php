@@ -32,7 +32,7 @@ final class AEMETGetController extends APISharedController
 
         $result = (new AEMETMunicipalityService)->formatMunicipalitiesArray($data);
 
-        return $this->errorResponse($result);
+        return $this->successResponse($result);
     }
 
     public function getMunicipality(string $municipality): JsonResponse
